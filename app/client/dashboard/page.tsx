@@ -1,8 +1,6 @@
-
 const Dashboard = () => {
   return (
-    <div className='bg-slate-950 w-full h-full'>Dashboard</div>
+    <div>Dashboard</div>
   )
 }
-
 export default Dashboard

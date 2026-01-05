@@ -1,26 +1,29 @@
-import { du, ru, nu } from "@/assets/icons";
+// import { du, ru, nu } from "@/assets/icons";
+import { RxDashboard } from "react-icons/rx";
+import { GiWhiteBook } from "react-icons/gi";
+import {  SiBookstack} from "react-icons/si";
 
 const universityList = [
   {
     id: 1,
-    title: "National Univeristy",
-    code: "national-univeristy",
-    path: "/client/national-univeristy",
-    image: nu,
+    title: "Dashboard",
+    code: "dashboard",
+    path: "/client/dashboard",
+    Icon: RxDashboard,
   },
   {
     id: 2,
-    title: "Dhaka University",
-    code: "dhaka-univeristy",
-    path: "/client/dhaka-univeristy",
-    image: du,
+    title: "Books",
+    code: "books",
+    path: "/client/books",
+    Icon: GiWhiteBook,
   },
   {
     id: 3,
-    title: "Rajshahi University",
-    code: "rajshahi-univeristy",
-    path: "/client/rajshahi-univeristy",
-    image: ru,
+    title: "Suggactions",
+    code: "suggactions",
+    path: "/client/suggactions",
+    Icon: SiBookstack,
   },
 ];
 
