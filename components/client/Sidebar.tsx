@@ -13,29 +13,33 @@ const ClientSideBar = () => {
       {isIconSidebar ? (
         <div className="w-20 h-full bg-gray-900">
           <div className="justify-center items-center py-5 flex">
-            <GoSidebarCollapse className="cursor-pointer text-2xl" onClick={() => setIsIconSidebar(false)} />
+            <GoSidebarCollapse
+              className="cursor-pointer text-2xl"
+              onClick={() => setIsIconSidebar(false)}
+            />
           </div>
           <div className="h-[calc(100%-108px)]">
-            {
-              universityList?.map(university => {
-
-               const Icon = university?.Icon
-               return (
-                 <Link className="border-b border-b-slate-700 hover:bg-slate-700 w-full py-3 text-center text-2xl  flex justify-center items-center" href={university?.path}><Icon /></Link>
-               )
-              })
-            }
+            {universityList?.map((university) => {
+              const Icon = university?.Icon;
+              return (
+                <Link
+                  key={university?.id}
+                  className="border-b border-b-slate-700 hover:bg-slate-700 w-full py-3 text-center text-2xl  flex justify-center items-center"
+                  href={university?.path}
+                >
+                  <Icon />
+                </Link>
+              );
+            })}
           </div>
           <div className="bg-red-500 text-white py-3 p text-center justify-center items-center flex ">
-            <IoMdLogOut  className="text-xl"/>
+            <IoMdLogOut className="text-xl" />
           </div>
         </div>
       ) : (
         <div className="w-70 bg-gray-900 h-full">
           <div className="py-5 px-5 flex flex-row items-center justify-between ">
-            <h1 className="text-xl font-extrabold  text-center">
-              University Library
-            </h1>
+            <h1 className="text-lg font-extrabold  text-center">U-Library</h1>
             <GoSidebarExpand
               onClick={() => setIsIconSidebar(true)}
               className="cursor-pointer text-2xl"
